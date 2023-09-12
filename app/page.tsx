@@ -19,7 +19,7 @@ export default function Home() {
           <TabsContent value="account">Make changes to your account here.</TabsContent>
           <TabsContent value="password">Change your password here.</TabsContent>
         </Tabs>
-        <div className='flex w-full justify-center absolute bottom-0'>
+        <div className='absolute bottom-0 right-0'>
           <Search />
         </div>
 
