@@ -16,7 +16,8 @@ export default function Search({ setResults, engine }: { setResults: Function, e
     const [query, setQuery] = useState<string>('')
 
     function handleChange(event: FormEvent<HTMLInputElement>): void {
-        setQuery(event.target.value)
+        const target = event.target as HTMLInputElement
+        setQuery(target.value)
     }
 
     function handleSubmit(event: FormEvent<HTMLFormElement>) {

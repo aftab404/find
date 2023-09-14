@@ -11,8 +11,9 @@ export default function Home() {
   const [results, setResults] = useState<Result[]>([])
 
   function handleChangeEngine(event: SyntheticEvent) {
-    console.log(event.target.innerHTML.toLowerCase())
-    setEngine(event.target.innerHTML.toLowerCase())
+    const target = event.target as HTMLButtonElement
+    console.log(target.innerHTML.toLowerCase())
+    setEngine(target.innerHTML.toLowerCase())
   }
 
 
@@ -32,6 +33,7 @@ export default function Home() {
               {Object.values(results).map((result) => {
                 return (
                   <Tile
+                    key={result.pageid}
                     result={result}
                   />
                 )
